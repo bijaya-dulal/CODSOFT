@@ -1,9 +1,9 @@
 import tkinter as tk
 
+#initialise main window
 window = tk.Tk()
-    
-greeting = tk.Label(text="to do list ")
+window.title('TO-DO-List')
+window.geometry('600x600')
 
-greeting.pack()
 
 window.mainloop()
