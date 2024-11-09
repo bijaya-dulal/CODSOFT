@@ -14,7 +14,15 @@ entry_task.pack(pady=10)
 
 
 #list box to display task
-listbox = tk.Listbox(window,width=60, height=15,)
+listbox = tk.Listbox(window,width=60, height=15,selectmode=tk.EXTENDED)
 listbox.pack(pady=10)
 
+#function to add,delete and complete task
+def add_task():
+    task =entry_task.get()
+    if task:
+        to_do.append(task)
+        listbox.insert(tk.END,task)
+        entry_task.delete(0,tk.END)
+ 
 window.mainloop()
